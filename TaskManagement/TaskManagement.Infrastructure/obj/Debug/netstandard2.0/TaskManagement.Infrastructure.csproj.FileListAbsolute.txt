@@ -1,0 +1,9 @@
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\bin\Debug\netstandard2.0\TaskManagement.Infrastructure.deps.json
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\bin\Debug\netstandard2.0\TaskManagement.Infrastructure.dll
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\bin\Debug\netstandard2.0\TaskManagement.Infrastructure.pdb
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\obj\Debug\netstandard2.0\TaskManagement.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\obj\Debug\netstandard2.0\TaskManagement.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\obj\Debug\netstandard2.0\TaskManagement.Infrastructure.AssemblyInfo.cs
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\obj\Debug\netstandard2.0\TaskManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\obj\Debug\netstandard2.0\TaskManagement.Infrastructure.dll
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Infrastructure\obj\Debug\netstandard2.0\TaskManagement.Infrastructure.pdb
