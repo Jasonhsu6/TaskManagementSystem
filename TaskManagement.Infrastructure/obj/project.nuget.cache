@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LEJSv4LeIWclwsPmldD7OweLJYlFOMoGybc/jrrK2zg9kEqPUouMKBtrfwtZ4khsZ6UinGgkrQJn/1cIio1uYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Xugao\\Desktop\\Antra\\Final Project\\TaskManagement\\TaskManagement.Infrastructure\\TaskManagement.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Xugao\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Xugao\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
