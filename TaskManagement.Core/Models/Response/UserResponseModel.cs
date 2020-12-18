@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TaskManagement.Core.Models.Response
 {
-    class UserResponseModel
+    public class UserResponseModel
     {
     }
 }

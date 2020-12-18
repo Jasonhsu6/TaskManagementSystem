@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore.Design;
+using TaskManagement.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace TaskManagement.API
 {
@@ -32,6 +35,10 @@ namespace TaskManagement.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TaskManagement.API", Version = "v1" });
             });
+
+            //add DbContext
+            services.AddDbContext<TaskManagementDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString(("TaskManagementDbConnection"))));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
