@@ -74,6 +74,12 @@ namespace TaskManagement.API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins(Configuration.GetValue<string>("clientSPAUrl"))
+                .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+            });
         }
     }
 }
