@@ -23,7 +23,7 @@ namespace TaskManagement.Infrastructure.Services
 
         public async Task<CompletedTaskResponseModel> AddCompletedTask(CompletedTaskRequestModel request)
         {
-            var entity = new TaskHistory
+            var taskHistory = new TaskHistory
             {
                 TaskId = request.TaskId,
                 UserId = request.UserId,
@@ -33,23 +33,23 @@ namespace TaskManagement.Infrastructure.Services
                 DueDate = request.DueDate,
                 Completed = request.Completed
             };
-            var completedTask = await _taskHistoryRepository.AddAsync(entity);
+            var entity = await _taskHistoryRepository.AddAsync(taskHistory);
             var response = new CompletedTaskResponseModel
             {
-                TaskId = request.TaskId,
-                UserId = request.UserId,
-                Title = request.Title,
-                Description = request.Description,
-                Remarks = request.Remarks,
-                DueDate = request.DueDate,
-                Completed = request.Completed
+                TaskId = entity.TaskId,
+                UserId = entity.UserId,
+                Title = entity.Title,
+                Description = entity.Description,
+                Remarks = entity.Remarks,
+                DueDate = entity.DueDate,
+                Completed = entity.Completed
             };
             return response;
         }
 
         public async Task<PendingTaskResponseModel> AddPendingTask(PendingTaskRequestModel request)
         {
-            var entity = new Core.Entities.Task
+            var task = new Core.Entities.Task
             {
                 Id = request.TaskId,
                 UserId = request.UserId,
@@ -59,16 +59,16 @@ namespace TaskManagement.Infrastructure.Services
                 DueDate = request.DueDate,
                 Priority = request.Priority
             };
-            var completedTask = await _taskRepository.AddAsync(entity);
+            var entity = await _taskRepository.AddAsync(task);
             var response = new PendingTaskResponseModel
             {
-                TaskId = request.TaskId,
-                UserId = request.UserId,
-                Title = request.Title,
-                Description = request.Description,
-                Remarks = request.Remarks,
-                DueDate = request.DueDate,
-                Priority = request.Priority
+                TaskId = entity.Id,
+                UserId = entity.UserId,
+                Title = entity.Title,
+                Description = entity.Description,
+                Remarks = entity.Remarks,
+                DueDate = entity.DueDate,
+                Priority = entity.Priority
             };
             return response;
         }
@@ -85,7 +85,7 @@ namespace TaskManagement.Infrastructure.Services
                 DueDate = request.DueDate,
                 Completed = request.Completed
             };
-            var completedTask = await _taskHistoryRepository.DeleteAsync(entity);
+            await _taskHistoryRepository.DeleteAsync(entity);
             var response = new CompletedTaskResponseModel
             {
                 TaskId = request.TaskId,
@@ -111,7 +111,7 @@ namespace TaskManagement.Infrastructure.Services
                 DueDate = request.DueDate,
                 Priority = request.Priority
             };
-            var pendingTask = await _taskRepository.DeleteAsync(entity);
+            await _taskRepository.DeleteAsync(entity);
             var response = new PendingTaskResponseModel
             {
                 TaskId = request.TaskId,
@@ -209,7 +209,7 @@ namespace TaskManagement.Infrastructure.Services
                 DueDate = request.DueDate,
                 Completed = request.Completed
             };
-            var completedTask = await _taskHistoryRepository.UpdateAsync(entity);
+            await _taskHistoryRepository.UpdateAsync(entity);
             var response = new CompletedTaskResponseModel
             {
                 TaskId = request.TaskId,
@@ -235,7 +235,7 @@ namespace TaskManagement.Infrastructure.Services
                 DueDate = request.DueDate,
                 Priority = request.Priority
             };
-            var pendingTask = await _taskRepository.UpdateAsync(entity);
+            await _taskRepository.UpdateAsync(entity);
             var response = new PendingTaskResponseModel
             {
                 TaskId = request.TaskId,

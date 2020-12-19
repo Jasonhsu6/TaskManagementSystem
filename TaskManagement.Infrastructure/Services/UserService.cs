@@ -22,18 +22,20 @@ namespace TaskManagement.Infrastructure.Services
         {
             var user = new User
             {
+                Id = request.Id,
                 Email = request.Email,
                 Password = request.Password,
                 Fullname = request.FullName,
                 Mobileno = request.Phone
             };
-            await _repository.AddAsync(user);
+            var obj = await _repository.AddAsync(user);
             var response = new UserResponseModel
             {
-                Email = request.Email,
-                Password = request.Password,
-                FullName = request.FullName,
-                Phone = request.Phone
+                Id = obj.Id,
+                Email = obj.Email,
+                Password = obj.Password,
+                FullName = obj.Fullname,
+                Phone = obj.Mobileno
             };
             return response;
         }
@@ -42,6 +44,7 @@ namespace TaskManagement.Infrastructure.Services
         {
             var user = new User
             {
+                Id = request.Id,
                 Email = request.Email,
                 Password = request.Password,
                 Fullname = request.FullName,
@@ -50,6 +53,7 @@ namespace TaskManagement.Infrastructure.Services
             await _repository.DeleteAsync(user);
             var response = new UserResponseModel
             {
+                Id = request.Id,
                 Email = request.Email,
                 Password = request.Password,
                 FullName = request.FullName,
@@ -103,6 +107,7 @@ namespace TaskManagement.Infrastructure.Services
             var user = await _repository.GetByIdAsync(id);
             var response = new UserResponseModel
             {
+                Id = user.Id,
                 Email = user.Email,
                 Password = user.Password,
                 FullName = user.Fullname,
@@ -119,6 +124,7 @@ namespace TaskManagement.Infrastructure.Services
             {
                 response.Add(new UserResponseModel
                 {
+                    Id = user.Id,
                     Email = user.Email,
                     Password = user.Password,
                     FullName = user.Fullname,
@@ -132,6 +138,7 @@ namespace TaskManagement.Infrastructure.Services
         {
             var user = new User
             {
+                Id = request.Id,
                 Email = request.Email,
                 Password = request.Password,
                 Fullname = request.FullName,
@@ -140,6 +147,7 @@ namespace TaskManagement.Infrastructure.Services
             await _repository.UpdateAsync(user);
             var response = new UserResponseModel
             {
+                Id = request.Id,
                 Email = request.Email,
                 Password = request.Password,
                 FullName = request.FullName,
