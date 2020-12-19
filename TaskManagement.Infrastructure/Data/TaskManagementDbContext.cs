@@ -44,7 +44,7 @@ namespace TaskManagement.Infrastructure.Data
             obj.ToTable("Users");
             obj.HasKey(u => u.Id);
             obj.Property(u => u.Email).HasMaxLength(50);
-            obj.Property(u => u.Password).HasMaxLength(10);
+            obj.Property(u => u.Password).HasMaxLength(20);
             obj.Property(u => u.Fullname).HasMaxLength(50);
         }
 
@@ -60,15 +60,6 @@ namespace TaskManagement.Infrastructure.Data
             obj.Property(th => th.Completed).HasDefaultValueSql("getdate()");
             obj.HasOne(th => th.User).WithMany(u => u.CompletedTasks);
         }
-
-
-
-
-
-
-
-
-
 
     }
 }
