@@ -11,6 +11,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore.Design;
+using TaskManagement.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+using TaskManagement.Core.RepositoryInterfaces;
+using TaskManagement.Infrastructure.Repositories;
+using TaskManagement.Core.Entities;
+using TaskManagement.Core.ServiceInterfaces;
+using TaskManagement.Infrastructure.Services;
 
 namespace TaskManagement.API
 {
@@ -32,6 +40,18 @@ namespace TaskManagement.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TaskManagement.API", Version = "v1" });
             });
+
+            //add DbContext
+            services.AddDbContext<TaskManagementDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString(("TaskManagementDbConnection"))));
+
+            services.AddScoped<IAsyncRepository<Core.Entities.Task>, EfRepository<Core.Entities.Task>>();
+            services.AddScoped<IAsyncRepository<TaskHistory>, EfRepository<TaskHistory>>();
+            services.AddScoped<IAsyncRepository<User>, EfRepository<User>>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddScoped<ITaskService, TaskService>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +63,11 @@ namespace TaskManagement.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TaskManagement.API v1"));
             }
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins(Configuration.GetValue<string>("clientSPAUrl"))
+                .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+            });
 
             app.UseHttpsRedirection();
 
@@ -54,6 +79,8 @@ namespace TaskManagement.API
             {
                 endpoints.MapControllers();
             });
+
+
         }
     }
 }

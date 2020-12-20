@@ -1,0 +1,9 @@
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\bin\Debug\netstandard2.1\TaskManagement.Core.deps.json
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\bin\Debug\netstandard2.1\TaskManagement.Core.dll
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\bin\Debug\netstandard2.1\TaskManagement.Core.pdb
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\obj\Debug\netstandard2.1\TaskManagement.Core.AssemblyInfoInputs.cache
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\obj\Debug\netstandard2.1\TaskManagement.Core.AssemblyInfo.cs
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\obj\Debug\netstandard2.1\TaskManagement.Core.csproj.CoreCompileInputs.cache
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\obj\Debug\netstandard2.1\TaskManagement.Core.dll
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\obj\Debug\netstandard2.1\TaskManagement.Core.pdb
+C:\Users\Xugao\Desktop\Antra\Final Project\TaskManagement\TaskManagement.Core\obj\Debug\netstandard2.1\TaskManagement.Core.csprojAssemblyReference.cache
