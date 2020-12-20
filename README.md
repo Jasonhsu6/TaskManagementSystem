@@ -29,3 +29,35 @@ A task management system developed by C# ASP.NET core and Angular
 (Not implemented, just for route testing)
 
 ## Angular source code: check TaskManagementSPA branch
+
+### Folder structure:
+
+#### core/services
+<ul>
+  <li>API services</li>
+  <li>Task service<li>
+  <li>User service</li>
+</ul>
+
+#### shared
+<ul>
+  <li>Components: including task-card component, component for displaying task as card</li>
+  <li>Models: completedTask, pendingTask, user models</li>
+</ul>
+
+### Components:
+#### header: header component, layout
+#### home: home component, home layout
+#### users: including users(list) component and user detail component
+#### tasks: including tasks(list) component, task-detail component, task-history(list) component, task-history-detail component 
+
+### App routing:
+<ul>
+  <li>localhost:4200/</li>
+  <li>localhost:4200/users</li>
+  <li>localhost:4200/users/:id</li>
+  <li>localhost:4200/tasks</li>
+  <li>localhost:4200/tasks/:id</li>
+  <li>localhost:4200/taskhistory</li>
+  <li>localhost:4200/tasks/:id</li>
+</ul>
