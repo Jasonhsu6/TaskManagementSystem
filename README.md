@@ -1,8 +1,10 @@
 # TaskManagementSystem
 A task management system developed by C# ASP.NET core and Angular
 
+ASP.NET source code: check [TaskmanagementMVC](/jasonhsu6/TaskManagementSystem/tree/TaskManagementMVC) branch
+Angular source code: check [TaskmanagementSPA](/jasonhsu6/TaskManagementSystem/tree/TaskManagementSPA) branch
 
-## ASP.NET source code: check TaskManagementMVC branch
+## ASP.NET code
 
 ### Folder structure:
 #### TaskManagement.Core
@@ -28,14 +30,14 @@ A task management system developed by C# ASP.NET core and Angular
 #### TaskManagement.Web
 (Not implemented, just for route testing)
 
-## Angular source code: check TaskManagementSPA branch
+## Angular
 
 ### Folder structure:
 
 #### core/services
 <ul>
   <li>API services</li>
-  <li>Task service<li>
+  <li>Task service</li>
   <li>User service</li>
 </ul>
 
@@ -46,10 +48,12 @@ A task management system developed by C# ASP.NET core and Angular
 </ul>
 
 ### Components:
-#### header: header component, layout
-#### home: home component, home layout
-#### users: including users(list) component and user detail component
-#### tasks: including tasks(list) component, task-detail component, task-history(list) component, task-history-detail component 
+<ul>
+  <li>header: header component, layout</li>
+  <li>home: home component, home layout</li>
+  <li>users: including users(list) component and user detail component</li>
+  <li>tasks: including tasks(list) component, task-detail component, task-history(list) component, task-history-detail component</li>
+</ul>
 
 ### App routing:
 <ul>
