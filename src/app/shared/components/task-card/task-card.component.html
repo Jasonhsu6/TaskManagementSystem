@@ -1,6 +1,7 @@
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">{{ task.title }}</h5>
+        <h5 *ngIf="task.priority" class="card-title"><a [routerLink]="[task.taskId]">{{ task.title }}</a></h5>
+        <h5 *ngIf="task.completed" class="card-title"><a [routerLink]="[task.taskId]">{{ task.title }}</a></h5>
         <h6 class="card-subtitle mb-2">Assigned to: {{ task.userId }}</h6>
         <h6 *ngIf="task.priority" class="card-subtitle mb-2 text-muted">Priority: {{ task.priority }}</h6>
         <h6 *ngIf="task.completed" class="card-subtitle mb-2 text-muted">Completed: {{ task.completed | date:'medium' }}</h6>
