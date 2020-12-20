@@ -1,0 +1,24 @@
+<div>
+    <h1>User Infomation: </h1>
+    <ul>
+        <li>Full Name: {{ user.fullName }}</li>
+        <li>Email: {{ user.email }}</li>
+        <li>Phone: {{ user.phone }}</li>
+    </ul>
+</div>
+
+<h1>Tasks</h1>
+
+<div class="card-deck">
+    <div *ngFor="let task of pendingTasks">
+        <app-task-card [task] = "task"></app-task-card>
+    </div>
+</div>
+
+<h1>Task History</h1>
+<div class="card-deck">
+    <div *ngFor="let task of completedTasks">
+        <app-task-card [task] = "task"></app-task-card>
+    </div>
+</div>
+

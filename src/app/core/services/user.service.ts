@@ -36,12 +36,12 @@ export class UserService {
   }
 
   getPendingTasksByUser(userId: number): Observable<PendingTask[]> {
-    return this.http.get(`${environment.apiUrl}` + '/user/' + userId + '/pending').pipe(
+    return this.http.get(`${environment.apiUrl}` + 'user/' + userId + '/pending').pipe(
       map((response) => response as any[])
     );
   }
   getCompletedTasksByUser(userId: number): Observable<CompletedTask[]> {
-    return this.http.get(`${environment.apiUrl}` + '/user/' + userId + '/completed').pipe(
+    return this.http.get(`${environment.apiUrl}` + 'user/' + userId + '/completed').pipe(
       map((response) => response as any[])
     );
   }

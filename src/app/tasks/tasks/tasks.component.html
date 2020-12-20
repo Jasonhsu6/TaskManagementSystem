@@ -1,0 +1,14 @@
+<h1>Tasks</h1>
+
+<div class="card-deck">
+    <div *ngFor="let task of pendingTasks">
+        <app-task-card [task] = "task"></app-task-card>
+    </div>
+</div>
+
+<h1>Task History</h1>
+<div class="card-deck">
+    <div *ngFor="let task of completedTasks">
+        <app-task-card [task] = "task"></app-task-card>
+    </div>
+</div>
