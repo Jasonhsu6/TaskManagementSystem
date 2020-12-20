@@ -1,9 +1,9 @@
 export interface CompletedTask {
-    TaskId: number,
-    UserId?: number,
-    Title?: string,
-    Description?: string,
-    DueDate?: Date,
-    Remarks?: string,
-    Completed: Date,
+    taskId: number,
+    userId?: number,
+    title?: string,
+    description?: string,
+    dueDate?: Date,
+    remarks?: string,
+    completed: Date,
 }

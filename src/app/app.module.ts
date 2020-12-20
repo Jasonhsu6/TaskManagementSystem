@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TaskCardComponent } from './shared/components/task-card/task-card.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { TaskHistoryComponent } from './tasks/task-history/task-history.component';
+import { TaskDetailComponent } from './tasks/task-detail/task-detail.component';
+import { TaskHistoryDetailComponent } from './tasks/task-history-detail/task-history-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { UserDetailComponent } from './users/user-detail/user-detail.component';
     TasksComponent,
     TaskCardComponent,
     UserDetailComponent,
+    TaskHistoryComponent,
+    TaskDetailComponent,
+    TaskHistoryDetailComponent,
   ],
   imports: [
     BrowserModule,

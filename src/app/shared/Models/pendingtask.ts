@@ -1,9 +1,9 @@
 export interface PendingTask {
-    TaskId: number,
-    UserId?: number,
-    Title?: string,
-    Description?: string,
-    DueDate?: Date,
-    Remarks?: string,
-    Priority?: string,
+    taskId: number,
+    userId?: number,
+    title?: string,
+    description?: string,
+    dueDate?: Date,
+    remarks?: string,
+    priority?: string,
 }

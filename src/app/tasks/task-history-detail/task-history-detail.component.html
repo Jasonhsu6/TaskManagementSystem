@@ -1,0 +1,9 @@
+<h1>Completed Task Detail</h1>
+<ul>
+    <li><strong>Title:</strong> {{ task.title }}</li>
+    <li><strong>Assigned to: </strong>{{ task.userId }}</li>
+    <li><strong>Completed: </strong>{{ task.completed | date:'medium' }}</li>
+    <li><strong>Due: </strong>{{ task.dueDate | date:'medium' }}</li>
+    <li><strong>Description: </strong>{{ task.description }}</li>
+    <li><strong>Remarks: </strong>{{ task.remarks }}</li>
+</ul>
