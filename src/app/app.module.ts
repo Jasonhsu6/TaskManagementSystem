@@ -14,6 +14,8 @@ import { UserDetailComponent } from './users/user-detail/user-detail.component';
 import { TaskHistoryComponent } from './tasks/task-history/task-history.component';
 import { TaskDetailComponent } from './tasks/task-detail/task-detail.component';
 import { TaskHistoryDetailComponent } from './tasks/task-history-detail/task-history-detail.component';
+import { UsersEditComponent } from './users/users-edit/users-edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,15 @@ import { TaskHistoryDetailComponent } from './tasks/task-history-detail/task-his
     TaskHistoryComponent,
     TaskDetailComponent,
     TaskHistoryDetailComponent,
+    UsersEditComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

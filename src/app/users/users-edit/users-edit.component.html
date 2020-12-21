@@ -1,0 +1,21 @@
+<div class="container">
+    <form (ngSubmit)="handleSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input [(ngModel)]="user.email" type="emai" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input [(ngModel)]="user.password" type="password" class="form-control" id="password" placeholder="Enter Password">
+        </div>
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input [(ngModel)]="user.fullName" type="text" class="form-control" id="fullName" placeholder="Enter full name">
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input [(ngModel)]="user.phone" type="text" class="form-control" id="mobile" placeholder="Enter phone number">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

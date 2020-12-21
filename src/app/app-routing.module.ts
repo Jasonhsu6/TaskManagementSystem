@@ -6,6 +6,7 @@ import { TaskHistoryDetailComponent } from './tasks/task-history-detail/task-his
 import { TaskHistoryComponent } from './tasks/task-history/task-history.component';
 import { TasksComponent } from './tasks/tasks/tasks.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { UsersEditComponent } from './users/users-edit/users-edit.component';
 import { UsersComponent } from './users/users/users.component';
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: "users/:id",
     component: UserDetailComponent,
+  },
+  {
+    path: "users-edit",
+    component: UsersEditComponent,
   },
   {
     path: "tasks",
